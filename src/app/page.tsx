@@ -34,7 +34,7 @@ function HomePage() {
               Change which ChatGPT model you want to use
             </p>
             <p className="infoText">
-              Messages are being stored in firebase's firestore
+              Messages are being stored in firebases firestore
             </p>
             <p className="infoText">
               Hot Toast notifications when the AI is thinking
