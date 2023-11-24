@@ -5,6 +5,7 @@ import { useSession, signOut } from "next-auth/react";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { db } from "../../../firebase";
 import ChatRow from "./ChatRow";
+import ModelSelection from "./ModelSelection";
 
 function SideBar() {
   const { data: session } = useSession();
@@ -23,7 +24,9 @@ function SideBar() {
         <div>
           <NewChat />
 
-          <div>{/* NewModel */}</div>
+          <div className="hidden sm:inline">
+            <ModelSelection />
+          </div>
 
           {chats?.docs.map((chat) => (
             <ChatRow
